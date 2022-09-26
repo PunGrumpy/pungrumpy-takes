@@ -6,6 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION, HOMEPAGE_URL } from '../config'
 import Body from '../components/Body.astro'
 import Content from '../components/Content.astro'
 import { IoArrowForward } from 'react-icons/io5/index.js'
+import MasterHead from '../components/MasterHead.astro'
 ---
 
 <!DOCTYPE html>
@@ -16,13 +17,14 @@ import { IoArrowForward } from 'react-icons/io5/index.js'
   <Body>
     <Header title={SITE_TITLE} />
     <main class="pt-[56px]">
+      <MasterHead />
       <h1 class="font-mplus text-center">What I take</h1>
       <Content>
         <section>
           <p class="mb-8 indent-4">
             My hobby as a computer science student is photography, I shoot with
-            my Cannon EOS RP lens 50mm f/1.8 STM. I also use my iPhone 11. As a
-            result, I've been working hard to improve my photography skills.
+            my Cannon EOS RP lens EF 50mm f/1.8 STM. I also use my iPhone 11. As
+            a result, I've been working hard to improve my photography skills.
             Every time I take a new photograph, I try to learn something new.
             And I take a new photo every day. So, here is a photo gallery of my
             photos. Finally, I'd like to share my photography portfolio.
