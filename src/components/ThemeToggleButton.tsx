@@ -25,7 +25,6 @@ export default function ThemeToggle() {
 
   useEffect(() => {
     const root = document.documentElement
-    console.log(root)
     if (theme === 'light') {
       root.classList.remove('dark')
     } else {
