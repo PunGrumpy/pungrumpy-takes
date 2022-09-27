@@ -1,0 +1,44 @@
+---
+import BaseHead from '../components/BaseHead.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import { SITE_TITLE, SITE_DESCRIPTION, HOMEPAGE_URL } from '../config'
+import Body from '../components/Body.astro'
+import Content from '../components/Content.astro'
+import { IoChevronForward } from 'react-icons/io5/index.js'
+import Masterhead from '../components/Masthead.astro'
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <Body>
+    <Header title={SITE_TITLE} />
+    <main class="pt-[56px]">
+      <Masterhead />
+      <Content>
+        <section>
+          <h1 class="text-3xl text-center font-mplus mt-12 mb-3">
+            Oops, Not Found
+          </h1>
+          <p class="text-center text-gray-500 mb-8">
+            The page you are looking for does not exist.
+          </p>
+          <div class="text-center py-4">
+            <a
+              class="px-[1.5rem] py-[0.8rem] bg-[#ffa51e] text-white border-none rounded-[0.6rem] text-[1.2rem] text-bold drop-shadow-lg shadow-black hover:bg-orange-500"
+              href="/"
+              >Go to homepage
+              <IoChevronForward
+                className={'inline-flex text-center text-2xl text-white'}
+              />
+            </a>
+          </div>
+        </section>
+      </Content>
+    </main>
+    <Footer />
+  </Body>
+</html>
