@@ -1,6 +1,16 @@
 <section class="relative mb-6 h-80 flex justify-center items-center">
   <div class="absolute w-full h-full overflow-hidden">
-    <video class="absolute inset-0 min-w-full min-h-full object-cover opacity-30" autoplay="autoplay" muted="muted" loop="loop" playsinline><source src= /></video>
+    <video
+      class="absolute inset-0 min-w-full min-h-full object-cover opacity-30"
+      poster="/Masterhead-poster.png"
+      autoplay="autoplay"
+      muted="muted"
+      loop="loop"
+      playsinline
+    >
+      <source src={'/Masterhead.webm'} type="video/webm; codecs=vp9" />
+      <source src={'/Masterhead.mp4'} type="video/mp4; codecs=hvc1" />
+    </video>
   </div>
   <div class="z-10 text-center px-8 drop-shadow-lg shadow-black">
     <div class="uppercase text-sm mb-4">Welcome to</div>
