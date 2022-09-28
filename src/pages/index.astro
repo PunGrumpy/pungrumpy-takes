@@ -50,7 +50,7 @@ const posts = (await Astro.glob('./posts/*.md')).sort(
                 <li class="text-center mb-4">
                   <a href={post.url} class="hover:text-orange-400">
                     <Image
-                      class="border border-slate-400 dark:border-zinc-700 rounded-xl"
+                      class="border border-slate-400 dark:border-zinc-700 rounded-xl relative transition-all duration-300 cursor-pointer filter lg:grayscale lg:hover:grayscale-0"
                       src={post.frontmatter.heroImage}
                       width={720 * 2}
                       aspectRatio={2.0}
