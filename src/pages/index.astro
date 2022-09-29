@@ -8,6 +8,7 @@ import Content from '../components/Content.astro'
 import { IoArrowForward } from 'react-icons/io5/index.js'
 import Masterhead from '../components/Masthead.astro'
 import { Image } from '@astrojs/image/components'
+import CreatedWithSection from '../components/CreatedWithSection.astro'
 
 const posts = (await Astro.glob('./posts/*.md')).sort(
   (a: any, b: any) =>
@@ -51,7 +52,7 @@ const posts = (await Astro.glob('./posts/*.md')).sort(
                 <li class="text-center mb-4">
                   <a
                     href={post.url}
-                    class="text-orange-400 xl:hover:text-orange-400 relative transition-all duration-300 cursor-pointer filter 2xl:grayscale 2xl:hover:grayscale-0"
+                    class="text-orange-500 dark:text-orange-400 xl:text-zinc-900 xl:dark:text-zinc-300 xl:hover:text-orange-400 xl:hover:dark:text-orange-400 relative transition-all duration-300 cursor-pointer filter 2xl:grayscale 2xl:hover:grayscale-0"
                   >
                     <Image
                       class="border border-slate-400 dark:border-zinc-700 rounded-xl "
@@ -68,6 +69,7 @@ const posts = (await Astro.glob('./posts/*.md')).sort(
             }
           </ul>
         </section>
+        <CreatedWithSection />
       </Content>
     </main>
     <Footer />
