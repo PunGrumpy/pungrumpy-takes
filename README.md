@@ -25,7 +25,6 @@ PROJECT_ROOT
 │   │   └── icons
 │   ├── layouts         # page layouts
 │   ├── pages           # page files
-│   │   ├── categories  # category pages
 │   │   └── posts       # .md files
 │   └── styles          # global stylesheets
 └── .astro              # Astro config file
