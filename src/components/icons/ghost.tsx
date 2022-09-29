@@ -5,7 +5,7 @@ export default function GhostIcon() {
     <img
       src="/logo.png"
       alt=""
-      className="w-7 inline-block transition-transform group-hover:rotate-[20deg]"
+      className="w-7 inline-block transition-transform group-hover:scale-150"
     />
   )
 }
