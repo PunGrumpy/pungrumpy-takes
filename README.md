@@ -30,6 +30,10 @@ PROJECT_ROOT
 └── .astro              # Astro config file
 ```
 
+## Tracking the project progress
+
+![Alt](https://repobeats.axiom.co/api/embed/146c8a4de244698a29dfb39a509314ef7d55c744.svg 'Repobeats analytics image')
+
 ## License
 
 MIT License.
