@@ -37,7 +37,7 @@ export default function ThemeToggle() {
   }, [])
 
   return isMounted ? (
-    <div className="inline-flex items-center p-[1px] rounded-3xl transition-transform bg-orange-300 dark:bg-zinc-600">
+    <div className="relative inline-flex items-center p-[1px] rounded-3xl transition-colors duration-100 ease-in-out bg-orange-300 dark:bg-zinc-600">
       {themes.map(t => {
         const checked = t === theme
         return (
