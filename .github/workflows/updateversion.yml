@@ -1,0 +1,15 @@
+on: push
+name: Update Version
+jobs:
+  createPullRequest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Bump version
+        run: npm version patch
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Bump version
+          title: Bump version
