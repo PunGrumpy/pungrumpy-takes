@@ -1,7 +1,11 @@
-on: push
-name: Update Version
+name: "Bump Version"
+
+on:
+  push:
+    branches:
+      - "main"
 jobs:
-  createPullRequest:
+  bump-version:
     runs-on: ubuntu-latest
     steps:
       - name: "Check out code"
