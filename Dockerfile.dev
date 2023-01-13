@@ -1,0 +1,15 @@
+FROM node:19-alpine
+
+USER node
+
+RUN mkdir -p /home/node/app
+WORKDIR /home/node/app
+
+RUN npm install yarn
+
+COPY --chown=node:node package.json yarn.lock ./
+RUN yarn install --pure-lockfile
+
+COPY --chown=node:node . .
+
+CMD [ "yarn", "dev" ]

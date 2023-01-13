@@ -12,6 +12,43 @@ https://pun-grumpy-takes.vercel.app/
 - [Headless UI](https://headlessui.com/) - Unstyled interactive components
 - [React Icons](https://react-icons.github.io/react-icons/) - Icon set
 
+## Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/PunGrumpy/PunGrumpy-Takes.git
+```
+
+### Local Development
+
+```bash
+# Install dependencies
+yarn install
+
+# Start the development server
+yarn dev
+```
+
+### Docker
+
+#### Docker Build & Run
+
+```bash
+# Build the image
+docker build -f Dockerfile.dev -t pungrumpy-takes .
+
+# Run the container
+docker run -it -p 3000:3000 pungrumpy-takes:latest
+
+```
+
+#### Docker Compose
+
+```bash
+# Docker Compose
+docker-compose -f docker-compose-dev.yml up
+```
+
 ## Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
