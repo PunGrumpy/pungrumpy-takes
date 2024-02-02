@@ -4,16 +4,9 @@ import react from '@astrojs/react'
 import image from '@astrojs/image'
 import tailwind from '@astrojs/tailwind'
 import addClasses from 'rehype-add-classes'
-import vercel from '@astrojs/vercel/serverless'
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
-  adapter: vercel({
-    webAnalytics: {
-      enabled: true
-    }
-  }),
   site: 'https://pun-grumpy-takes.vercel.app/',
   integrations: [sitemap(), react(), image(), tailwind()],
   markdown: {
