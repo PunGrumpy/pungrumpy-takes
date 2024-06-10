@@ -3,4 +3,4 @@
 
 export const SITE_TITLE = 'What I take photos - Pun Grumpy'
 export const SITE_DESCRIPTION = 'A curated list of photos I take.'
-export const HOMEPAGE_URL = 'https://pun-grumpy.vercel.app/'
+export const HOMEPAGE_URL = 'https://pungrumpy.com'

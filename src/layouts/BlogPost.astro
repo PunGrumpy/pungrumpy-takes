@@ -28,6 +28,38 @@ const {
 
   <Body>
     <Header />
+    <style is:global>
+      main article.markdown-body {
+        ul {
+          @apply list-disc list-inside pl-4 mb-4
+        }
+        h1, h2, h3, h4, h5 {
+          @apply font-bold font-mplus
+        }
+        h1 {
+          @apply text-4xl
+        }
+        h2 {
+          @apply text-2xl
+        }
+        h3 {
+          @apply text-xl
+        }
+        h4 {
+          @apply text-lg
+        }
+        img {
+          @apply border border-slate-300 dark:border-zinc-700 rounded-xl mb-6
+        }
+        p {
+          @apply mb-6
+        }
+        a {
+          @apply underline underline-offset-2 hover:text-orange-500 decoration-orange-500
+        }
+      }
+      </style>
+    
     <main class="pt-[56px]">
       <Content className="pt-6">
         <div class="mb-8">

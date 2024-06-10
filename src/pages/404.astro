@@ -5,8 +5,8 @@ import Footer from '../components/Footer.astro'
 import { SITE_TITLE, SITE_DESCRIPTION, HOMEPAGE_URL } from '../config'
 import Body from '../components/Body.astro'
 import Content from '../components/Content.astro'
-import { IoChevronForward } from 'react-icons/io5/index.js'
-import Masterhead from '../components/Masthead.astro'
+import { IoArrowForward, IoChevronForward } from 'react-icons/io5'
+import Masthead from '../components/Masthead.astro'
 ---
 
 <!DOCTYPE html>
@@ -17,19 +17,17 @@ import Masterhead from '../components/Masthead.astro'
   <Body>
     <Header title={SITE_TITLE} />
     <main class="pt-[56px]">
-      <Masterhead />
+      <Masthead />
       <Content>
         <section>
-          <h1 class="text-3xl text-center font-mplus mt-12 mb-3">
-            Oops, Not Found
+          <h1 class="text-3xl text-center font-mplus mt-12 mb-8">
+            Oops, not found
           </h1>
-          <p class="text-center text-gray-500 mb-8">
-            The page you are looking for does not exist.
-          </p>
-          <div class="text-center py-4 button">
-            <a class="" href="/"
-              >Go to homepage
-              <IoChevronForward className={'inline-flex'} />
+          <div class="text-center py-4">
+            <a
+              class="inline-flex items-center gap-1 underline underline-offset-2 decoration-orange-500"
+              href="/"
+              >Go to Index <IoChevronForward />
             </a>
           </div>
         </section>
@@ -37,50 +35,4 @@ import Masterhead from '../components/Masthead.astro'
     </main>
     <Footer />
   </Body>
-  <style>
-    body {
-      text-align: center;
-      background-color: #ffcc8e;
-    }
-
-    .button {
-      position: relative;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
-
-    .button a {
-      color: white;
-      font-family: Helvetica, sans-serif;
-      font-weight: bold;
-      font-size: 24px;
-      text-align: center;
-      text-decoration: none;
-      background-color: #ffa12b;
-      display: block;
-      position: relative;
-      padding: 1.6rem 0.8rem;
-
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-      text-shadow: 0px 1px 0px #000;
-      filter: dropshadow(color=#000, offx=0px, offy=1px);
-
-      -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
-      -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
-      box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
-
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-    }
-
-    .button a:active {
-      top: 10px;
-      background-color: #f78900;
-
-      -webkit-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #915100;
-      -moz-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3pxpx 0 #915100;
-      box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #915100;
-    }
-  </style>
 </html>
