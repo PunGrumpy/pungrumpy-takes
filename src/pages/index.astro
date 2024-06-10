@@ -1,5 +1,5 @@
 ---
-import type { ImageMetadata } from 'astro';
+import type { ImageMetadata } from 'astro'
 import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
@@ -11,7 +11,9 @@ import Masterhead from '../components/Masthead.astro'
 import { Image } from 'astro:assets'
 import CreatedWithSection from '../components/CreatedWithSection.astro'
 
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}');
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/*.{jpeg,jpg,png,gif}'
+)
 console.log('images:', images)
 
 const posts = (await Astro.glob('./posts/*.md')).sort(
@@ -21,7 +23,7 @@ const posts = (await Astro.glob('./posts/*.md')).sort(
 )
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
@@ -54,31 +56,33 @@ const posts = (await Astro.glob('./posts/*.md')).sort(
             {
               posts.map(post => {
                 const heroImageAsset = images[post.frontmatter.heroImage]
-                const heroImageSrc =  heroImageAsset ? heroImageAsset() : post.frontmatter.heroImage
+                const heroImageSrc = heroImageAsset
+                  ? heroImageAsset()
+                  : post.frontmatter.heroImage
                 return (
-                <li class="text-center mb-4">
-                  <a
-                    href={post.url}
-                    class="text-orange-500 dark:text-orange-400 xl:text-zinc-900 xl:dark:text-zinc-300 xl:hover:text-orange-400 xl:hover:dark:text-orange-400 relative transition-all duration-300 cursor-pointer filter 2xl:grayscale 2xl:hover:grayscale-0"
-                  >
-                    <Image
-                      class="border border-slate-300 dark:border-zinc-700 rounded-xl"
-                      src={heroImageSrc}
-                      width={720 * 2}
-                      height={720}
-                      alt="Thumbnail"
-                    />
-                    <div class="mt-3 text-xl font-bold">
-                      {post.frontmatter.title}
-                    </div>
-                    {post.frontmatter.description && (
-                      <div class="opacity-70">
-                        {post.frontmatter.description}
+                  <li class="text-center mb-4">
+                    <a
+                      href={post.url}
+                      class="text-orange-500 dark:text-orange-400 xl:text-zinc-900 xl:dark:text-zinc-300 xl:hover:text-orange-400 xl:hover:dark:text-orange-400 relative transition-all duration-300 cursor-pointer filter 2xl:grayscale 2xl:hover:grayscale-0"
+                    >
+                      <Image
+                        class="border border-slate-300 dark:border-zinc-700 rounded-xl"
+                        src={heroImageSrc}
+                        width={720 * 2}
+                        height={720}
+                        alt="Thumbnail"
+                      />
+                      <div class="mt-3 text-xl font-bold">
+                        {post.frontmatter.title}
                       </div>
-                    )}
-                  </a>
-                </li>
-              )
+                      {post.frontmatter.description && (
+                        <div class="opacity-70">
+                          {post.frontmatter.description}
+                        </div>
+                      )}
+                    </a>
+                  </li>
+                )
               })
             }
           </ul>
